@@ -14,7 +14,8 @@ class ReadingsController extends Controller
      */
     public function index()
     {
-        return  Reading::all();    }
+        return  Reading::all();   
+    }
 
     /**
      * Show the form for creating a new resource.

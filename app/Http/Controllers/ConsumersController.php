@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Consumer;
+use App\Http\Resources\ConsumersResource;
+use Illuminate\Console\View\Components\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ConsumersController extends Controller
 {
@@ -14,7 +18,7 @@ class ConsumersController extends Controller
      */
     public function index()
     {
-        return  Consumer::all();
+        return  Consumer::all();   
     }
 
     /**
@@ -35,7 +39,9 @@ class ConsumersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $body = $request->getContent();
+        $input = json_decode($body, true);
+
     }
 
     /**

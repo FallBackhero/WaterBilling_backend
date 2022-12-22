@@ -27,6 +27,8 @@ class BarangayPurok extends Model
                 $list[$item->barangay][] = $item->purok;
             }
         }
+
+        $list = array();
         return $list;
     }
 }
